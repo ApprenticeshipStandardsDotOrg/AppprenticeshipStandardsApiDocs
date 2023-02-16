@@ -32,7 +32,7 @@ This endpoint retrieves all kittens.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET <%=config[:endpoint] %>/api/kittens`
 
 ### Query Parameters
 
@@ -48,7 +48,7 @@ Remember — a happy kitten is an authenticated kitten!
 ## Get a Specific Kitten
 
 ```shell
-curl "http://example.com/api/kittens/2" \
+curl "<%= config[:endpoint] %>/kittens/2" \
   -H "Authorization: meowmeowmeow"
 ```
 

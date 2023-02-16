@@ -10,7 +10,7 @@ toc_footers:
 
 includes:
   - authentication
-  - occupations
+  - occupations.md.erb
   - errors
 
 search: true
