@@ -11,6 +11,7 @@ toc_footers:
 includes:
 #  - authentication
   - occupations.md.erb
+  - standards.md.erb
   - errors
 
 search: true
