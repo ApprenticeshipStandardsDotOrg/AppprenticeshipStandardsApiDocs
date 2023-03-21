@@ -1,9 +1,9 @@
 # Occupations
 
-## Get All Kittens
+## Get All Occupations
 
 ```shell
-curl "http://example.com/api/kittens" \
+curl "<%= config[:endpoint] %>/occupations" \
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -28,11 +28,11 @@ curl "http://example.com/api/kittens" \
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all occupations.
 
 ### HTTP Request
 
-`GET <%=config[:endpoint] %>/api/kittens`
+`GET <%= config[:endpoint] %>/occupations`
 
 ### Query Parameters
 
@@ -45,10 +45,10 @@ available | true | If set to false, the result will include kittens that have al
 Remember — a happy kitten is an authenticated kitten!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Occupation
 
 ```shell
-curl "<%= config[:endpoint] %>/kittens/2" \
+curl "<%= config[:endpoint] %>/occupations/2" \
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -64,13 +64,13 @@ curl "<%= config[:endpoint] %>/kittens/2" \
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific occupation.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET <%= config[:endpoint] %>/occupations/<ID>`
 
 ### URL Parameters
 
@@ -81,7 +81,7 @@ ID | The ID of the kitten to retrieve
 ## Delete a Specific Kitten
 
 ```shell
-curl "http://example.com/api/kittens/2" \
+curl "<%= config[:endpoint] %>/occupations/2" \
   -X DELETE \
   -H "Authorization: meowmeowmeow"
 ```
