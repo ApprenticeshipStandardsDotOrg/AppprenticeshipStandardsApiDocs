@@ -90,6 +90,14 @@ This endpoint retrieves all standards.
 
 `GET <%= config[:endpoint] %>/standards`
 
+### Query Parameters
+
+Parameter           | Description
+---------           | -----------
+filter[title]       | Filter standards by title
+filter[onet_code]   | Filter standards by ONET code
+filter[rapids_code] | Filter standards by RAPIDS code
+
 ## Get a specific standard
 
 ```shell
