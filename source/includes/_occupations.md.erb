@@ -1,31 +1,46 @@
 # Occupations
 
-## Get All Occupations
+## Get all occupations
 
 ```shell
-curl "<%= config[:endpoint] %>/occupations" \
-  -H "Authorization: meowmeowmeow"
+curl "<%= config[:endpoint] %>/occupations"
 ```
 
-> The above command returns JSON structured like this:
+> Example JSON response:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+{
+    "data": [
+        {
+            "id": "34448da3-6260-4b90-ba5d-fb7d6f1cbbe6",
+                "type": "occupations",
+                "links": {
+                    "self": "<%= config[:endpoint] %>/occupations/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
+                },
+                "attributes": {
+                    "title": "3D Printing Technician",
+                    "onet_code": "17-3026.00",
+                    "rapids_code": "2078",
+                    "time_based_hours": 2000,
+                    "competency_based_hours": 2000
+                }
+        },
+        {
+            "id": "e6fc1a85-a3ca-4b91-9314-0869c14346e7",
+            "type": "occupations",
+            "links": {
+                "self": "<%= config[:endpoint] %>/occupations/e6fc1a85-a3ca-4b91-9314-0869c14346e7"
+            },
+            "attributes": {
+                "title": "ALARM OPERATOR (Gov Serv)",
+                "onet_code": "43-5031.00",
+                "rapids_code": "0870",
+                "time_based_hours": 2000,
+                "competency_based_hours": 2000
+            }
+        }
+    ]
+}
 ```
 
 This endpoint retrieves all occupations.
@@ -40,10 +55,6 @@ Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
 ## Get a Specific Occupation
 
@@ -77,32 +88,3 @@ This endpoint retrieves a specific occupation.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```shell
-curl "<%= config[:endpoint] %>/occupations/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
