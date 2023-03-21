@@ -25,4 +25,6 @@ meta:
 
 # Introduction
 
-Welcome to the documentation for the ApprenticeshipStandards API. Currently this API is public and does not require authentication.
+Welcome to the documentation for the ApprenticeshipStandards API. Currently this
+API is public and does not require authentication. This API is a REST API
+following the [{json:api}](https://jsonapi.org/format/) specification.
