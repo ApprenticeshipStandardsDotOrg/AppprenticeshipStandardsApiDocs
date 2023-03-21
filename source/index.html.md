@@ -12,7 +12,7 @@ includes:
 #  - authentication
   - occupations.md.erb
   - standards.md.erb
-  - errors
+#  - errors
 
 search: true
 
