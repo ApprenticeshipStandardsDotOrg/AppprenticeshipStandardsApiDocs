@@ -2,6 +2,8 @@
 
 ## List standards
 
+> Example request:
+
 ```shell
 curl "<%= config[:endpoint] %>/standards"
 ```
@@ -91,6 +93,13 @@ This endpoint retrieves all standards.
 `GET <%= config[:endpoint] %>/standards`
 
 ### Query Parameters
+To filter by multiple values, separate with a comma.
+
+> Example request with filters:
+
+```shell
+curl "<%= config[:endpoint] %>/standards?filter[onet_code]=47-2152.00,51-0786.00"
+```
 
 Parameter           | Description
 ---------           | -----------
@@ -99,6 +108,8 @@ filter[onet_code]   | Filter standards by ONET code
 filter[rapids_code] | Filter standards by RAPIDS code
 
 ## Retrieve standard
+
+> Example request:
 
 ```shell
 curl "<%= config[:endpoint] %>/standards/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
