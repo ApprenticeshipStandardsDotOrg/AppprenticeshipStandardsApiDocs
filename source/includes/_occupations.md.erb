@@ -49,28 +49,34 @@ This endpoint retrieves all occupations.
 
 `GET <%= config[:endpoint] %>/occupations`
 
-## Get a Specific Occupation
+## Get a specific occupation
 
 ```shell
-curl "<%= config[:endpoint] %>/occupations/2" \
-  -H "Authorization: meowmeowmeow"
+curl "<%= config[:endpoint] %>/occupations/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
 ```
 
-> The above command returns JSON structured like this:
+> Example JSON response:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+    "data": {
+        "id": "34448da3-6260-4b90-ba5d-fb7d6f1cbbe6",
+        "type": "occupations",
+        "links": {
+            "self": "<%= config[:endpoint] %>/occupations/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
+        },
+        "attributes": {
+            "title": "3D Printing Technician",
+            "onet_code": "17-3026.00",
+            "rapids_code": "2078",
+            "time_based_hours": 2000,
+            "competency_based_hours": 2000
+        }
+    }
 }
 ```
 
 This endpoint retrieves a specific occupation.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
@@ -80,4 +86,4 @@ This endpoint retrieves a specific occupation.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the occupation to retrieve
