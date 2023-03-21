@@ -1,6 +1,6 @@
 # Standards
 
-## Get all standards
+## List standards
 
 ```shell
 curl "<%= config[:endpoint] %>/standards"
@@ -98,7 +98,7 @@ filter[title]       | Filter standards by title
 filter[onet_code]   | Filter standards by ONET code
 filter[rapids_code] | Filter standards by RAPIDS code
 
-## Get a specific standard
+## Retrieve standard
 
 ```shell
 curl "<%= config[:endpoint] %>/standards/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
