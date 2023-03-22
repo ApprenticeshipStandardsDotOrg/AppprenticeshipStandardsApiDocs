@@ -20,3 +20,15 @@ bundle exec middleman server
 The documentation will be available at http://localhost:4567.
 
 [set-up]: https://github.com/slatedocs/slate/wiki/Using-Slate-Natively
+
+## Deploy
+The documentation is hosted on GitHub pages and is viewable at https://apprenticeshipstandardsdotorg.github.io/ApprenticeshipStandardsApiDocs.
+
+To deploy changes, simply run the [deploy script][deploy-script] that was
+developed by Slate:
+
+```shell
+./deploy.sh
+```
+
+[deploy-script]: https://github.com/slatedocs/slate/wiki/Deploying-Slate
