@@ -1,0 +1,93 @@
+# Occupations
+
+## List occupations
+
+> Example request:
+
+```shell
+curl "<%= config[:endpoint] %>/occupations"
+```
+
+> Example JSON response:
+
+```json
+{
+    "data": [
+        {
+            "id": "34448da3-6260-4b90-ba5d-fb7d6f1cbbe6",
+                "type": "occupations",
+                "links": {
+                    "self": "<%= config[:endpoint] %>/occupations/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
+                },
+                "attributes": {
+                    "title": "3D Printing Technician",
+                    "onet_code": "17-3026.00",
+                    "rapids_code": "2078",
+                    "time_based_hours": 2000,
+                    "competency_based_hours": 2000
+                }
+        },
+        {
+            "id": "e6fc1a85-a3ca-4b91-9314-0869c14346e7",
+            "type": "occupations",
+            "links": {
+                "self": "<%= config[:endpoint] %>/occupations/e6fc1a85-a3ca-4b91-9314-0869c14346e7"
+            },
+            "attributes": {
+                "title": "ALARM OPERATOR (Gov Serv)",
+                "onet_code": "43-5031.00",
+                "rapids_code": "0870",
+                "time_based_hours": 2000,
+                "competency_based_hours": 2000
+            }
+        }
+    ]
+}
+```
+
+This endpoint retrieves all occupations.
+
+### HTTP Request
+
+`GET <%= config[:endpoint] %>/occupations`
+
+## Retrieve occupation
+
+> Example request:
+
+```shell
+curl "<%= config[:endpoint] %>/occupations/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
+```
+
+> Example JSON response:
+
+```json
+{
+    "data": {
+        "id": "34448da3-6260-4b90-ba5d-fb7d6f1cbbe6",
+        "type": "occupations",
+        "links": {
+            "self": "<%= config[:endpoint] %>/occupations/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
+        },
+        "attributes": {
+            "title": "3D Printing Technician",
+            "onet_code": "17-3026.00",
+            "rapids_code": "2078",
+            "time_based_hours": 2000,
+            "competency_based_hours": 2000
+        }
+    }
+}
+```
+
+This endpoint retrieves a specific occupation.
+
+### HTTP Request
+
+`GET <%= config[:endpoint] %>/occupations/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the occupation to retrieve

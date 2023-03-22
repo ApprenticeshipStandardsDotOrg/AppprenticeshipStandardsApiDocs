@@ -1,0 +1,158 @@
+# Standards
+
+## List standards
+
+> Example request:
+
+```shell
+curl "<%= config[:endpoint] %>/standards"
+```
+
+> Example JSON response:
+
+```json
+{
+    "data": [
+        {
+            "id": "6ec4adc5-7430-41a8-bd41-154fffe51ba5",
+            "type": "standards",
+            "links": {
+                "self": "<%= config[:endpoint] %>/standards/6ec4adc5-7430-41a8-bd41-154fffe51ba5"
+            },
+            "attributes": {
+                "title": "Pipe Fitter",
+                "existing_title": null,
+                "sponsor_name": "Hardy Corporation",
+                "registration_agency": "Alabama (SAA)",
+                "onet_code": "47-2152.00",
+                "rapids_code": "0414",
+                "ojt_type": "time_based",
+                "term_months": 48,
+                "probationary_period_months": 1000,
+                "apprenticeship_to_journeyworker_ratio": "1:1",
+                "ojt_hours_min": null,
+                "ojt_hours_max": 8000,
+                "rsi_hours_min": null,
+                "rsi_hours_max": 680
+            }
+        },
+        {
+            "id": "7f1e3364-3815-4ca1-99e7-59af4f5eef38",
+            "type": "standards",
+            "links": {
+                "self": "<%= config[:endpoint] %>/standards/7f1e3364-3815-4ca1-99e7-59af4f5eef38"
+            },
+            "attributes": {
+                "title": "Pipe Fitter",
+                "existing_title": null,
+                "sponsor_name": "Hardy Corporation",
+                "registration_agency": "Alabama (SAA)",
+                "onet_code": "47-2152.00",
+                "rapids_code": "0414",
+                "ojt_type": "hybrid_based",
+                "term_months": 48,
+                "probationary_period_months": 1000,
+                "apprenticeship_to_journeyworker_ratio": "1:1",
+                "ojt_hours_min": null,
+                "ojt_hours_max": 8000,
+                "rsi_hours_min": null,
+                "rsi_hours_max": 680
+            }
+        },
+        {
+            "id": "36af0202-ec79-44e8-aaeb-b0f8f7a427ca",
+            "type": "standards",
+            "links": {
+                "self": "<%= config[:endpoint] %>/standards/36af0202-ec79-44e8-aaeb-b0f8f7a427ca"
+            },
+            "attributes": {
+                "title": "Pipe Fitter",
+                "existing_title": null,
+                "sponsor_name": "Hardy Corporation",
+                "registration_agency": "Alabama (SAA)",
+                "onet_code": "47-2152.00",
+                "rapids_code": "0091",
+                "ojt_type": "competency_based",
+                "term_months": 48,
+                "probationary_period_months": 1000,
+                "apprenticeship_to_journeyworker_ratio": "1:1",
+                "ojt_hours_min": null,
+                "ojt_hours_max": 8000,
+                "rsi_hours_min": null,
+                "rsi_hours_max": 680
+            }
+        }
+    ]
+}
+```
+
+This endpoint retrieves all standards.
+
+### HTTP Request
+
+`GET <%= config[:endpoint] %>/standards`
+
+### Query Parameters
+To filter by multiple values, separate with a comma.
+
+> Example request with filters:
+
+```shell
+curl "<%= config[:endpoint] %>/standards?filter[onet_code]=47-2152.00,51-0786.00"
+```
+
+Parameter           | Description
+---------           | -----------
+filter[title]       | Filter standards by title
+filter[onet_code]   | Filter standards by ONET code
+filter[rapids_code] | Filter standards by RAPIDS code
+
+## Retrieve standard
+
+> Example request:
+
+```shell
+curl "<%= config[:endpoint] %>/standards/34448da3-6260-4b90-ba5d-fb7d6f1cbbe6"
+```
+
+> Example JSON response:
+
+```json
+{
+    "data": {
+        "id": "6ec4adc5-7430-41a8-bd41-154fffe51ba5",
+        "type": "standards",
+        "links": {
+            "self": "<%= config[:endpoint] %>/standards/6ec4adc5-7430-41a8-bd41-154fffe51ba5"
+        },
+        "attributes": {
+            "title": "Pipe Fitter",
+            "existing_title": null,
+            "sponsor_name": "Hardy Corporation",
+            "registration_agency": "Alabama (SAA)",
+            "onet_code": "47-2152.00",
+            "rapids_code": "0414",
+            "ojt_type": "time_based",
+            "term_months": 48,
+            "probationary_period_months": 1000,
+            "apprenticeship_to_journeyworker_ratio": "1:1",
+            "ojt_hours_min": null,
+            "ojt_hours_max": 8000,
+            "rsi_hours_min": null,
+            "rsi_hours_max": 680
+        }
+    }
+}
+```
+
+This endpoint retrieves a specific standard.
+
+### HTTP Request
+
+`GET <%= config[:endpoint] %>/standards/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the standard to retrieve
