@@ -1,0 +1,22 @@
+# Authentication
+
+> Example authorization request:
+
+```shell
+curl -X 'GET' \
+  '<%= config[:endpoint] %>/occupations' \
+  -H 'Accept: application/vnd.api+json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYmI1NjNlZWMtYTZmZi00MjZiLWFkNzUtNzNiM2IyZWM2MDA1IiwiYXBpX2tleV9pZCI6ImE1YWFmYzA0LTA1YmItNDVlMS04NDliLTEzOTlmMTNjNDg5OCJ9.EdwBMEPGBIZwarW1GTHzqpqus6rt8VsJZLM_cJgN8lE'
+```
+
+ApprenticeshipStandards uses API keys to allow access to the API. The API key
+must be included in all API requests to the server in a header that looks like
+the following:
+
+`Authorization: Bearer your-api-token`
+
+<aside class="notice">
+You must replace <code>your-api-token</code> with your personal API key.
+</aside>
+
+For readability, the headers will not be included in further examples.

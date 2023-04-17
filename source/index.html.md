@@ -9,7 +9,7 @@ toc_footers:
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
-#  - authentication
+  - authentication.md.erb
   - occupations.md.erb
   - standards.md.erb
 #  - errors
@@ -26,5 +26,5 @@ meta:
 # Introduction
 
 Welcome to the documentation for the ApprenticeshipStandards API. Currently this
-API is public and does not require authentication. This API is a REST API
+API is public but requires an API key for authentication. This API is a REST API
 following the [{json:api}](https://jsonapi.org/format/) specification.
