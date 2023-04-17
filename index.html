@@ -316,6 +316,9 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
             <a href="#occupations" class="toc-h1 toc-link" data-title="Occupations">Occupations</a>
               <ul class="toc-list-h2">
                   <li>
@@ -347,8 +350,28 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the documentation for the ApprenticeshipStandards API. Currently this
-API is public and does not require authentication. This API is a REST API
+API is public but requires an API key for authentication. This API is a REST API
 following the <a href="https://jsonapi.org/format/">{json:api}</a> specification.</p>
+<h1 id='authentication'>Authentication</h1>
+<blockquote>
+<p>Example authorization request:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> <span class="s1">'GET'</span> <span class="se">\</span>
+  <span class="s1">'https://admin.apprenticeshipstandards.org/api/v1/occupations'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Accept: application/vnd.api+json'</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYmI1NjNlZWMtYTZmZi00MjZiLWFkNzUtNzNiM2IyZWM2MDA1IiwiYXBpX2tleV9pZCI6ImE1YWFmYzA0LTA1YmItNDVlMS04NDliLTEzOTlmMTNjNDg5OCJ9.EdwBMEPGBIZwarW1GTHzqpqus6rt8VsJZLM_cJgN8lE'</span>
+</code></pre></div>
+<p>ApprenticeshipStandards uses API keys to allow access to the API. The API key
+must be included in all API requests to the server in a header that looks like
+the following:</p>
+
+<p><code>Authorization: Bearer your-api-token</code></p>
+
+<aside class="notice">
+You must replace <code>your-api-token</code> with your personal API key.
+</aside>
+
+<p>For readability, the headers will not be included in further examples.</p>
 <h1 id='occupations'>Occupations</h1><h2 id='list-occupations'>List occupations</h2>
 <blockquote>
 <p>Example request:</p>
